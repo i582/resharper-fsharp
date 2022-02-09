@@ -6,7 +6,7 @@ import com.jetbrains.rider.test.base.BaseTestWithSolution
 import com.jetbrains.rider.test.enums.CoreVersion
 import org.testng.annotations.Test
 
-@Test
+@Test(enabled = false)
 @TestEnvironment(coreVersion = CoreVersion.DEFAULT)
 class ReferencesOrder : BaseTestWithSolution() {
     override fun getSolutionDirectoryName() = "ReferencesOrder"

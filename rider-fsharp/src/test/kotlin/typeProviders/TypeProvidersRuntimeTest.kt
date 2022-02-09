@@ -15,7 +15,7 @@ import com.jetbrains.rider.test.scriptingApi.markupAdapter
 import com.jetbrains.rider.test.scriptingApi.withOpenedEditor
 import org.testng.annotations.Test
 
-@Test
+@Test(enabled = false)
 class TypeProvidersRuntimeTest : BaseTestWithSolution() {
     override fun getSolutionDirectoryName() = "CoreTypeProviderLibrary"
     override val restoreNuGetPackages = true

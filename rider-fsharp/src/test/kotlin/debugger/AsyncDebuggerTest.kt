@@ -7,7 +7,7 @@ import com.jetbrains.rider.test.scriptingApi.toggleBreakpoint
 import com.jetbrains.rider.test.scriptingApi.waitForPause
 import org.testng.annotations.Test
 
-@Test
+@Test(enabled = false)
 @TestEnvironment(coreVersion = CoreVersion.DEFAULT)
 class AsyncDebuggerTest : DebuggerTestBase() {
     override val projectName = "AsyncProgram"

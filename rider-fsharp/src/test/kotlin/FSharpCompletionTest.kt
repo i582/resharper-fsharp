@@ -8,7 +8,7 @@ import com.jetbrains.rider.test.scriptingApi.typeWithLatency
 import com.jetbrains.rider.test.scriptingApi.waitForCompletion
 import org.testng.annotations.Test
 
-@Test
+@Test(enabled = false)
 @TestEnvironment(coreVersion = CoreVersion.DEFAULT)
 class FSharpCompletionTest : CompletionTestBase() {
     override fun getSolutionDirectoryName() = "CoreConsoleApp"
