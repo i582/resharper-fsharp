@@ -14,25 +14,25 @@ class FSharpCompletionTest : CompletionTestBase() {
     override fun getSolutionDirectoryName() = "CoreConsoleApp"
     override val restoreNuGetPackages = true
 
-    @Test
+    @Test(enabled = false)
     fun namespaceKeyword() = doTestTyping("names")
 
-    @Test
+    @Test(enabled = false)
     fun listModule() = doTestChooseItem("List")
 
-    @Test
+    @Test(enabled = false)
     fun listModuleValue() = doTestTyping("filt")
 
     @Test(enabled = false)
     fun localVal01() = doTestChooseItem("x")
 
-    @Test
+    @Test(enabled = false)
     fun localVal02() = doTestTyping("x")
 
-    @Test
+    @Test(enabled = false)
     fun qualified01() = doTestChooseItem("a")
 
-    @Test
+    @Test(enabled = false)
     fun qualified02() = doTestChooseItem("a")
 
     private fun doTestTyping(typed: String) {

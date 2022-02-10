@@ -26,7 +26,7 @@ class TypeProvidersTest : BaseTestWithSolution() {
     @Test
     fun simpleGenerativeProvider() = doTest("SimpleGenerativeProvider")
 
-    @Test
+    @Test(enabled = false)
     fun providersErrors() = doTest("ProvidersErrors")
 
     @Test(description = "RIDER-60909")

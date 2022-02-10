@@ -14,7 +14,7 @@ class ReferencesOrder : BaseTestWithSolution() {
     override val waitForCaches = true
     override val restoreNuGetPackages = true
 
-    @Test()
+    @Test(enabled = false)
     fun testReferencesOrder() {
         val references = project.fcsHost.dumpSingleProjectLocalReferences.sync(Unit)
         assert(references == listOf("Library1.dll", "Library2.dll"))
