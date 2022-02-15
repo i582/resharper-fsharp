@@ -32,7 +32,7 @@ class TypeProvidersCacheTest : BaseTestWithSolution() {
         }
     }
 
-    @Test
+    @Test(enabled = false)
     fun checkCachesWhenProjectReloading() {
         withOutOfProcessTypeProviders {
             checkTypeProviders(File(testGoldFile.path + "_before"))
@@ -44,7 +44,7 @@ class TypeProvidersCacheTest : BaseTestWithSolution() {
         }
     }
 
-    @Test
+    @Test(enabled = false)
     fun invalidation() {
         val testDirectory = File(project.basePath + "/TypeProviderLibrary/Test")
 
@@ -71,7 +71,7 @@ class TypeProvidersCacheTest : BaseTestWithSolution() {
         }
     }
 
-    @Test
+    @Test(enabled = false)
     fun typing() {
         withOutOfProcessTypeProviders {
             withOpenedEditor(project, sourceFile) {
@@ -82,7 +82,7 @@ class TypeProvidersCacheTest : BaseTestWithSolution() {
         }
     }
 
-    @Test
+    @Test(enabled = false)
     fun projectsWithEqualProviders() {
         withOutOfProcessTypeProviders {
             withOpenedEditor(project, "TypeProviderLibrary/Library.fs") {

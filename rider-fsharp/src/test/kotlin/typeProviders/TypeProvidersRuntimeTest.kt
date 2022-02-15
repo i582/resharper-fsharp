@@ -20,7 +20,7 @@ class TypeProvidersRuntimeTest : BaseTestWithSolution() {
     override fun getSolutionDirectoryName() = "CoreTypeProviderLibrary"
     override val restoreNuGetPackages = true
 
-    @Test
+    @Test(enabled = false)
     @TestEnvironment(
         toolset = ToolsetVersion.TOOLSET_16,
         coreVersion = CoreVersion.DOT_NET_CORE_3_1,

@@ -20,7 +20,7 @@ import java.time.Duration
 class GenerativeTypeProvidersTest : BaseTestWithSolution() {
     override fun getSolutionDirectoryName() = "TypeProviderLibrary"
 
-    @Test
+    @Test(enabled = false)
     fun `generative type providers cross-project analysis`() {
         val generativeProviderProjectPath = "${project.solutionDirectoryPath}/GenerativeTypeProvider/GenerativeTypeProvider.fsproj"
 
