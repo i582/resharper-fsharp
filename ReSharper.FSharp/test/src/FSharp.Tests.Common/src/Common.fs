@@ -4,6 +4,7 @@ open System
 open System.Collections.Generic
 open FSharp.Compiler.CodeAnalysis
 open JetBrains.Application.Components
+open JetBrains.Application.FileSystemTracker
 open JetBrains.Application.platforms
 open JetBrains.DataFlow
 open JetBrains.Diagnostics
@@ -109,8 +110,9 @@ type TestFSharpResolvedSymbolsCache(lifetime, checkerService, psiModules, fcsPro
 
 
 [<SolutionComponent>]
-type TestFcsProjectBuilder(checkerService: FcsCheckerService, modulePathProvider: ModulePathProvider, logger: ILogger) =
-    inherit FcsProjectBuilder(checkerService, Mock<_>().Object, modulePathProvider, logger)
+type TestFcsProjectBuilder(checkerService: FcsCheckerService, modulePathProvider: ModulePathProvider, logger: ILogger,
+        fileSystemTracker: IFileSystemTracker) =
+    inherit FcsProjectBuilder(checkerService, Mock<_>().Object, modulePathProvider, logger, fileSystemTracker)
 
     override x.GetProjectItemsPaths(project, targetFrameworkId) =
         project.GetAllProjectFiles()

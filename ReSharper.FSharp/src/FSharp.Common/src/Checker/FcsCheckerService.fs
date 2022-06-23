@@ -32,7 +32,8 @@ module FcsCheckerService =
 
 
 type FcsProject =
-    { OutputPath: VirtualFileSystemPath
+    { LifetimeDefinition: LifetimeDefinition
+      OutputPath: VirtualFileSystemPath
       ProjectOptions: FSharpProjectOptions
       ParsingOptions: FSharpParsingOptions
       FileIndices: Dictionary<VirtualFileSystemPath, int>
