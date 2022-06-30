@@ -61,7 +61,7 @@ intellij {
     // updateSinceUntilBuild = false
 
     // Workaround for https://youtrack.jetbrains.com/issue/IDEA-179607
-    plugins.set(listOf("rider-plugins-appender"))
+    plugins.set(listOf("rider-plugins-appender", "com.jetbrains.rider-cpp"))
 }
 
 val repoRoot = projectDir.parentFile!!
